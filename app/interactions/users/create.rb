@@ -1,14 +1,12 @@
 class Users::Create < ActiveInteraction::Base
-  string  :name, :surname, :patronymic, :email, :nationality, :country, :full_name
-  integer :age, :gender
+  string  :name, :surname, :patronymic, :email, :nationality, :country, :full_name, :gender
+  integer :age
   array   :interests, default: []
   array   :skills, default: []
 
   validates :name, :surname, :patronymic, :email, :age, :nationality, :country, :gender, :full_name, presence: true
-  validates :email, uniqueness: { case_sensitive: false }
   validates :age, numericality: true, inclusion: { in: 1..90 }
-
-  enum gender: { male: 0, female: 1 }
+  validates :gender, inclusion: { in: %w[male female] }
 
   def execute
     user = create_user

@@ -16,6 +16,10 @@ gem 'active_interaction', '~> 5.3'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 6.0'
+  gem 'faker'
 end
 
 group :development do

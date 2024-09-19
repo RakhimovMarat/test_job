@@ -1,7 +1,7 @@
 namespace :fix do
   desc "Исправление опечаток в коде и в названии файлов"
   task :rename_skil do
-    directories = ['app', 'config', 'test']
+    directories = ['app', 'config', 'spec', 'test']
 
     def replace_in_file(file, from, to)
       text = File.read(file)
