@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Тестовая задание:
 
-Things you may want to cover:
+* Добавлен гем ActiveInteraction и внесены изменения в класс Users::Create
 
-* Ruby version
+* Опечатку Skil можно исправить двумя способами: исправление вручную и с помощью rake скрипта refactor.rake (команда rake fix:rename_skil). В обоих случаях потребуется миграцияЁ чтобы изменить имя таблицы
 
-* System dependencies
+* Испарвлены связи на has_and_belongs_to_many
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Тестирование с RSpec
